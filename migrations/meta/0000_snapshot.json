@@ -1,0 +1,158 @@
+{
+  "id": "01382872-8a00-4e7f-9d93-83483ab9c768",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.ins": {
+      "name": "ins",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "inscl": {
+          "name": "inscl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subtype": {
+          "name": "subtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cid": {
+          "name": "cid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hcode": {
+          "name": "hcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateexp": {
+          "name": "dateexp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hospmain": {
+          "name": "hospmain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hospsub": {
+          "name": "hospsub",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "govcode": {
+          "name": "govcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "govname": {
+          "name": "govname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "permitno": {
+          "name": "permitno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "docno": {
+          "name": "docno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ownrpid": {
+          "name": "ownrpid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ownname": {
+          "name": "ownname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subinscl": {
+          "name": "subinscl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "relinscl": {
+          "name": "relinscl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "htype": {
+          "name": "htype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

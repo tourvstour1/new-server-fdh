@@ -7,9 +7,15 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "^20.5.7",
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.6",
+    "tsx": "^4.19.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "encore.dev": "^1.46.14"
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.41.0",
+    "encore.dev": "^1.46.14",
+    "pg": "^8.14.1"
   }
 }

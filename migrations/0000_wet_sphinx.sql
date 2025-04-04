@@ -1,0 +1,23 @@
+CREATE TABLE "ins" (
+	"id" varchar PRIMARY KEY NOT NULL,
+	"hospital_code" text,
+	"hn" text,
+	"inscl" text,
+	"subtype" text,
+	"cid" text,
+	"hcode" text,
+	"dateexp" text,
+	"hospmain" text,
+	"hospsub" text,
+	"govcode" text,
+	"govname" text,
+	"permitno" text,
+	"docno" text,
+	"ownrpid" text,
+	"ownname" text,
+	"an" text,
+	"seq" text,
+	"subinscl" text,
+	"relinscl" text,
+	"htype" text
+);
