@@ -1,6 +1,6 @@
 import { integer, pgTable, text, uuid } from "drizzle-orm/pg-core";
 
-const idx = pgTable("idx", {
+export const idx = pgTable("idx", {
   id: uuid("id").defaultRandom().primaryKey(),
   hospital_code: text("hospital_code").notNull(),
 

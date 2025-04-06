@@ -1,0 +1,29 @@
+export interface AdpModel {
+  hn: string;
+  an: string;
+  dateopd: string;
+  type: string;
+  code: string;
+  qty: string;
+  rate: string;
+  seq: string;
+  cagcode: string;
+  dose: string;
+  ca_type: string;
+  serialno: string;
+  totcopay: string;
+  use_status: string;
+  total: string;
+  qtyday: string;
+  tmltcode: string;
+  status1: string;
+  bi: string;
+  clinic: string;
+  itemsrc: string;
+  provider: string;
+  gravida: string;
+  ga_week: string;
+  dcip_e_screen: string;
+  lmp: string;
+  sp_item: string;
+}

@@ -1,4 +1,3 @@
 import { Service } from "encore.dev/service";
 
-
-export default new Service('webhook')
+export default new Service("webhook");
