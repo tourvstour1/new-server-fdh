@@ -1,4 +1,6 @@
 export interface ChaModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   an: string;
   date: string;
@@ -6,4 +8,5 @@ export interface ChaModel {
   amount: string;
   person_id: string;
   seq: string;
+  status: number;
 }

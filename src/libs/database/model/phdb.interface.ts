@@ -1,4 +1,6 @@
 export interface PhdbModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   code: string;
   qty: string;
@@ -6,4 +8,5 @@ export interface PhdbModel {
   an: string;
   seq: string;
   inscl: string;
+  status: number;
 }

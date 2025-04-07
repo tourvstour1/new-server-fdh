@@ -1,4 +1,6 @@
 export interface IopModel {
+  id: string;
+  hospital_code: string;
   an: string;
   oper: string;
   optype: string;
@@ -7,4 +9,5 @@ export interface IopModel {
   timein: string;
   dateout: string;
   timeout: string;
+  status: number;
 }

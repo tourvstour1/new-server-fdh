@@ -1,4 +1,6 @@
 export interface ChtModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   an: string;
   date: string;
@@ -9,4 +11,5 @@ export interface ChtModel {
   seq: string;
   opd_memo: string;
   invoice_no: string;
+  status: number;
 }

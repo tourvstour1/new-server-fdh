@@ -1,4 +1,6 @@
 export interface OrfModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   dateopd: string;
   clinic: string;
@@ -6,4 +8,5 @@ export interface OrfModel {
   refertype: string;
   seq: string;
   referdate: string;
+  status: number;
 }

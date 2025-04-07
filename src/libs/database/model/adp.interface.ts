@@ -1,4 +1,6 @@
 export interface AdpModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   an: string;
   dateopd: string;
@@ -26,4 +28,5 @@ export interface AdpModel {
   dcip_e_screen: string;
   lmp: string;
   sp_item: string;
+  status: number;
 }

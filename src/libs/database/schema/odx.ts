@@ -1,7 +1,7 @@
 import { integer, pgTable, text, uuid } from "drizzle-orm/pg-core";
 
 export const odx = pgTable("odx", {
-  id: uuid("id").defaultRandom().primaryKey(),
+  odx_id: uuid("odx_id").defaultRandom().primaryKey(),
   hospital_code: text("hospital_code").notNull(),
 
   hn: text("hn"),

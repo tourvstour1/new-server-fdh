@@ -1,4 +1,6 @@
 export interface IpdModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   an: string;
   dateadm: string;
@@ -12,4 +14,5 @@ export interface IpdModel {
   adm_w: string;
   uuc: string;
   svcType: string;
+  status: number;
 }

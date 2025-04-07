@@ -1,4 +1,6 @@
 export interface LabfuModel {
+  id: string;
+  hospital_code: string;
   hcode: string;
   hn: string;
   person_id: string;
@@ -6,4 +8,5 @@ export interface LabfuModel {
   seq: string;
   labtest: string;
   labresult: string;
+  status: number;
 }

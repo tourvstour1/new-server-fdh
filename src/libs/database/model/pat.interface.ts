@@ -1,4 +1,6 @@
 export interface PatModel {
+  id: string;
+  hospital_code: string;
   hcode: string;
   hn: string;
   changwat: string;
@@ -13,4 +15,5 @@ export interface PatModel {
   title: string;
   fname: string;
   lname: string;
+  status: number;
 }

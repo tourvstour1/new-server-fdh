@@ -1,4 +1,6 @@
 export interface OpdModel {
+  id: string;
+  hospital_code: string;
   hn: string; //เลขประจำตัวผู้ป่วย
   clinic: string;
   dateopd: string;
@@ -14,4 +16,5 @@ export interface OpdModel {
   optype: string;
   typein: string;
   typeout: string;
+  status: number;
 }

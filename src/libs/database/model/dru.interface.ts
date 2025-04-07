@@ -1,4 +1,6 @@
 export interface DruModel {
+  id: string;
+  hospital_code: string;
   hcode: string;
   hn: string;
   an: string;
@@ -23,4 +25,5 @@ export interface DruModel {
   sigtext: string;
   provider: string;
   sp_item: string;
+  status: number;
 }

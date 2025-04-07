@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1743703149202,
-      "tag": "0000_wet_sphinx",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1743867905964,
-      "tag": "0001_freezing_pepper_potts",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1743870696353,
-      "tag": "0002_smooth_onslaught",
+      "when": 1744002424256,
+      "tag": "0000_ancient_hex",
       "breakpoints": true
     }
   ]

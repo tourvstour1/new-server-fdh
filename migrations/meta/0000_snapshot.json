@@ -1,24 +1,769 @@
 {
-  "id": "01382872-8a00-4e7f-9d93-83483ab9c768",
+  "id": "c71ec922-2616-4b0e-8b52-40bf8ba72cf6",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.ins": {
-      "name": "ins",
+    "public.adp": {
+      "name": "adp",
       "schema": "",
       "columns": {
-        "id": {
-          "name": "id",
-          "type": "varchar",
+        "adp_id": {
+          "name": "adp_id",
+          "type": "uuid",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "default": "gen_random_uuid()"
         },
         "hospital_code": {
           "name": "hospital_code",
           "type": "text",
           "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
           "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateopd": {
+          "name": "dateopd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type": {
+          "name": "type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "qty": {
+          "name": "qty",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rate": {
+          "name": "rate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cagcode": {
+          "name": "cagcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dose": {
+          "name": "dose",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ca_type": {
+          "name": "ca_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serialno": {
+          "name": "serialno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "totcopay": {
+          "name": "totcopay",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "use_status": {
+          "name": "use_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total": {
+          "name": "total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "qtyday": {
+          "name": "qtyday",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tmltcode": {
+          "name": "tmltcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status1": {
+          "name": "status1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bi": {
+          "name": "bi",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinic": {
+          "name": "clinic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "itemsrc": {
+          "name": "itemsrc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "provider": {
+          "name": "provider",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gravida": {
+          "name": "gravida",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ga_week": {
+          "name": "ga_week",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dcip_e_screen": {
+          "name": "dcip_e_screen",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lmp": {
+          "name": "lmp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sp_item": {
+          "name": "sp_item",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.aer": {
+      "name": "aer",
+      "schema": "",
+      "columns": {
+        "aer_id": {
+          "name": "aer_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateopd": {
+          "name": "dateopd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "authae": {
+          "name": "authae",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aedate": {
+          "name": "aedate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aetime": {
+          "name": "aetime",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aetype": {
+          "name": "aetype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refer_no": {
+          "name": "refer_no",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refmaini": {
+          "name": "refmaini",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ireftype": {
+          "name": "ireftype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refmaino": {
+          "name": "refmaino",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oreftype": {
+          "name": "oreftype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ucae": {
+          "name": "ucae",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "emtype": {
+          "name": "emtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aestatus": {
+          "name": "aestatus",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dalert": {
+          "name": "dalert",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "talert": {
+          "name": "talert",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cha": {
+      "name": "cha",
+      "schema": "",
+      "columns": {
+        "cha_id": {
+          "name": "cha_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date": {
+          "name": "date",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "chrgitem": {
+          "name": "chrgitem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount": {
+          "name": "amount",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cht": {
+      "name": "cht",
+      "schema": "",
+      "columns": {
+        "cht_id": {
+          "name": "cht_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date": {
+          "name": "date",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total": {
+          "name": "total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "paid": {
+          "name": "paid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pttype": {
+          "name": "pttype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "opd_memo": {
+          "name": "opd_memo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice_no": {
+          "name": "invoice_no",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice_lt": {
+          "name": "invoice_lt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.dru": {
+      "name": "dru",
+      "schema": "",
+      "columns": {
+        "dru_id": {
+          "name": "dru_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hcode": {
+          "name": "hcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinic": {
+          "name": "clinic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date_serv": {
+          "name": "date_serv",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "did": {
+          "name": "did",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "didname": {
+          "name": "didname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount": {
+          "name": "amount",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "drugprice": {
+          "name": "drugprice",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "drugcost": {
+          "name": "drugcost",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "didstd": {
+          "name": "didstd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unit": {
+          "name": "unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unit_pack": {
+          "name": "unit_pack",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "drugremark": {
+          "name": "drugremark",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pa_no": {
+          "name": "pa_no",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "totcopay": {
+          "name": "totcopay",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "use_status": {
+          "name": "use_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total": {
+          "name": "total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sigcode": {
+          "name": "sigcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sigtext": {
+          "name": "sigtext",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "provider": {
+          "name": "provider",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sp_item": {
+          "name": "sp_item",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.idx": {
+      "name": "idx",
+      "schema": "",
+      "columns": {
+        "idx_id": {
+          "name": "idx_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diag": {
+          "name": "diag",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dxtype": {
+          "name": "dxtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "drdx": {
+          "name": "drdx",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.ins": {
+      "name": "ins",
+      "schema": "",
+      "columns": {
+        "ins_id": {
+          "name": "ins_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
         },
         "hn": {
           "name": "hn",
@@ -133,6 +878,964 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.iop": {
+      "name": "iop",
+      "schema": "",
+      "columns": {
+        "iop_id": {
+          "name": "iop_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oper": {
+          "name": "oper",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "optype": {
+          "name": "optype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dropid": {
+          "name": "dropid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "datein": {
+          "name": "datein",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timein": {
+          "name": "timein",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateout": {
+          "name": "dateout",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timeout": {
+          "name": "timeout",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.ipd": {
+      "name": "ipd",
+      "schema": "",
+      "columns": {
+        "ipd_id": {
+          "name": "ipd_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateadm": {
+          "name": "dateadm",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timeadm": {
+          "name": "timeadm",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "datedsc": {
+          "name": "datedsc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timedsc": {
+          "name": "timedsc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dischs": {
+          "name": "dischs",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "discht": {
+          "name": "discht",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "warddsc": {
+          "name": "warddsc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dept": {
+          "name": "dept",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "adm_w": {
+          "name": "adm_w",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uuc": {
+          "name": "uuc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "svctype": {
+          "name": "svctype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.irf": {
+      "name": "irf",
+      "schema": "",
+      "columns": {
+        "irf_id": {
+          "name": "irf_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refer": {
+          "name": "refer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refertype": {
+          "name": "refertype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.labfu": {
+      "name": "labfu",
+      "schema": "",
+      "columns": {
+        "labfu_id": {
+          "name": "labfu_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hcode": {
+          "name": "hcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateserv": {
+          "name": "dateserv",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "labtest": {
+          "name": "labtest",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "labresult": {
+          "name": "labresult",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.lvd": {
+      "name": "lvd",
+      "schema": "",
+      "columns": {
+        "lvd_id": {
+          "name": "lvd_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "seqlvd": {
+          "name": "seqlvd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateout": {
+          "name": "dateout",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timeout": {
+          "name": "timeout",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "datein": {
+          "name": "datein",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timein": {
+          "name": "timein",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "qtyday": {
+          "name": "qtyday",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.odx": {
+      "name": "odx",
+      "schema": "",
+      "columns": {
+        "odx_id": {
+          "name": "odx_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "datedx": {
+          "name": "datedx",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinic": {
+          "name": "clinic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diag": {
+          "name": "diag",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dxtype": {
+          "name": "dxtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "drdx": {
+          "name": "drdx",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.oop": {
+      "name": "oop",
+      "schema": "",
+      "columns": {
+        "oop_id": {
+          "name": "oop_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateopd": {
+          "name": "dateopd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinic": {
+          "name": "clinic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oper": {
+          "name": "oper",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dropid": {
+          "name": "dropid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "servprice": {
+          "name": "servprice",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.opd": {
+      "name": "opd",
+      "schema": "",
+      "columns": {
+        "opd_id": {
+          "name": "opd_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinic": {
+          "name": "clinic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateopd": {
+          "name": "dateopd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timeopd": {
+          "name": "timeopd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uuc": {
+          "name": "uuc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "detail": {
+          "name": "detail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "btemp": {
+          "name": "btemp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sbp": {
+          "name": "sbp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dbp": {
+          "name": "dbp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pr": {
+          "name": "pr",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rr": {
+          "name": "rr",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "optype": {
+          "name": "optype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "typein": {
+          "name": "typein",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "typeout": {
+          "name": "typeout",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.orf": {
+      "name": "orf",
+      "schema": "",
+      "columns": {
+        "orf_id": {
+          "name": "orf_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dateopd": {
+          "name": "dateopd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clinic": {
+          "name": "clinic",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refer": {
+          "name": "refer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refertype": {
+          "name": "refertype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "referdate": {
+          "name": "referdate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.pat": {
+      "name": "pat",
+      "schema": "",
+      "columns": {
+        "pat_id": {
+          "name": "pat_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "changwat": {
+          "name": "changwat",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amphur": {
+          "name": "amphur",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dob": {
+          "name": "dob",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sex": {
+          "name": "sex",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marriage": {
+          "name": "marriage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "occupa": {
+          "name": "occupa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nation": {
+          "name": "nation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "person_id": {
+          "name": "person_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "namepat": {
+          "name": "namepat",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fname": {
+          "name": "fname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lname": {
+          "name": "lname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "idtype": {
+          "name": "idtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.phdb": {
+      "name": "phdb",
+      "schema": "",
+      "columns": {
+        "phdb_id": {
+          "name": "phdb_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "hospital_code": {
+          "name": "hospital_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hn": {
+          "name": "hn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "qty": {
+          "name": "qty",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "price": {
+          "name": "price",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "an": {
+          "name": "an",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "inscl": {
+          "name": "inscl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
         }
       },
       "indexes": {},

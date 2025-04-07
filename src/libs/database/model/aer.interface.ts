@@ -1,4 +1,6 @@
 export interface AerModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   an: string;
   dateopd: string;
@@ -17,4 +19,5 @@ export interface AerModel {
   aestatus: string;
   dalert: string;
   talert: string;
+  status: number;
 }

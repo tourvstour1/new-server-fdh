@@ -1,4 +1,6 @@
 export interface OopModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   dateopd: string;
   clinic: string;
@@ -7,4 +9,5 @@ export interface OopModel {
   person_id: string;
   seq: string;
   servprice: number;
+  status: number;
 }

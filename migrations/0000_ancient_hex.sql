@@ -1,5 +1,5 @@
 CREATE TABLE "adp" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"adp_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"an" text,
@@ -32,7 +32,7 @@ CREATE TABLE "adp" (
 );
 --> statement-breakpoint
 CREATE TABLE "aer" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"aer_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"an" text,
@@ -56,7 +56,7 @@ CREATE TABLE "aer" (
 );
 --> statement-breakpoint
 CREATE TABLE "cha" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"cha_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"an" text,
@@ -69,7 +69,7 @@ CREATE TABLE "cha" (
 );
 --> statement-breakpoint
 CREATE TABLE "cht" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"cht_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"an" text,
@@ -85,8 +85,73 @@ CREATE TABLE "cht" (
 	"status" integer DEFAULT 1
 );
 --> statement-breakpoint
+CREATE TABLE "dru" (
+	"dru_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"hospital_code" text NOT NULL,
+	"hcode" text,
+	"hn" text,
+	"an" text,
+	"clinic" text,
+	"person_id" text,
+	"date_serv" text,
+	"did" text,
+	"didname" text,
+	"amount" text,
+	"drugprice" text,
+	"drugcost" text,
+	"didstd" text,
+	"unit" text,
+	"unit_pack" text,
+	"seq" text,
+	"drugremark" text,
+	"pa_no" text,
+	"totcopay" text,
+	"use_status" text,
+	"total" text,
+	"sigcode" text,
+	"sigtext" text,
+	"provider" text,
+	"sp_item" text,
+	"status" integer DEFAULT 1
+);
+--> statement-breakpoint
+CREATE TABLE "idx" (
+	"idx_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"hospital_code" text NOT NULL,
+	"an" text,
+	"diag" text,
+	"dxtype" text,
+	"drdx" text,
+	"status" integer DEFAULT 1
+);
+--> statement-breakpoint
+CREATE TABLE "ins" (
+	"ins_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"hospital_code" text NOT NULL,
+	"hn" text,
+	"inscl" text,
+	"subtype" text,
+	"cid" text,
+	"hcode" text,
+	"dateexp" text,
+	"hospmain" text,
+	"hospsub" text,
+	"govcode" text,
+	"govname" text,
+	"permitno" text,
+	"docno" text,
+	"ownrpid" text,
+	"ownname" text,
+	"an" text,
+	"seq" text,
+	"subinscl" text,
+	"relinscl" text,
+	"htype" text,
+	"status" integer DEFAULT 1
+);
+--> statement-breakpoint
 CREATE TABLE "iop" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"iop_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"an" text,
 	"oper" text,
@@ -100,7 +165,7 @@ CREATE TABLE "iop" (
 );
 --> statement-breakpoint
 CREATE TABLE "ipd" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"ipd_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"an" text,
@@ -119,7 +184,7 @@ CREATE TABLE "ipd" (
 );
 --> statement-breakpoint
 CREATE TABLE "irf" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"irf_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"an" text,
 	"refer" text,
@@ -128,7 +193,7 @@ CREATE TABLE "irf" (
 );
 --> statement-breakpoint
 CREATE TABLE "labfu" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"labfu_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hcode" text,
 	"hn" text,
@@ -141,7 +206,7 @@ CREATE TABLE "labfu" (
 );
 --> statement-breakpoint
 CREATE TABLE "lvd" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"lvd_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"seqlvd" text,
 	"an" text,
@@ -154,7 +219,7 @@ CREATE TABLE "lvd" (
 );
 --> statement-breakpoint
 CREATE TABLE "odx" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"odx_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"datedx" text,
@@ -168,7 +233,7 @@ CREATE TABLE "odx" (
 );
 --> statement-breakpoint
 CREATE TABLE "oop" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"oop_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"dateopd" text,
@@ -182,7 +247,7 @@ CREATE TABLE "oop" (
 );
 --> statement-breakpoint
 CREATE TABLE "opd" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"opd_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"clinic" text,
@@ -203,7 +268,7 @@ CREATE TABLE "opd" (
 );
 --> statement-breakpoint
 CREATE TABLE "orf" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"orf_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"dateopd" text,
@@ -216,7 +281,7 @@ CREATE TABLE "orf" (
 );
 --> statement-breakpoint
 CREATE TABLE "pat" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"pat_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"code" text,
 	"hn" text,
@@ -237,7 +302,7 @@ CREATE TABLE "pat" (
 );
 --> statement-breakpoint
 CREATE TABLE "phdb" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"phdb_id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"hospital_code" text NOT NULL,
 	"hn" text,
 	"code" text,
@@ -248,8 +313,3 @@ CREATE TABLE "phdb" (
 	"inscl" text,
 	"status" integer DEFAULT 1
 );
---> statement-breakpoint
-ALTER TABLE "ins" ALTER COLUMN "id" SET DATA TYPE uuid;--> statement-breakpoint
-ALTER TABLE "ins" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
-ALTER TABLE "ins" ALTER COLUMN "hospital_code" SET NOT NULL;--> statement-breakpoint
-ALTER TABLE "ins" ADD COLUMN "status" integer DEFAULT 1;

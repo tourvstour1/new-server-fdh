@@ -1,4 +1,6 @@
 export interface InsModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   inscl: string;
   subtype: string;
@@ -18,4 +20,5 @@ export interface InsModel {
   subinscl: string;
   relinscl: string;
   htype: string;
+  status: number;
 }

@@ -1,4 +1,6 @@
 export interface OdxModel {
+  id: string;
+  hospital_code: string;
   hn: string;
   datedx: string;
   clinic: string;
@@ -7,4 +9,5 @@ export interface OdxModel {
   drdx: string;
   person_id: string;
   seq: string;
+  status: number;
 }

@@ -1,4 +1,6 @@
 export interface LvdModel {
+  id: string;
+  hospital_code: string;
   seqlvd: string;
   an: string;
   dateout: string;
@@ -6,4 +8,5 @@ export interface LvdModel {
   datein: string;
   timein: string;
   qtyday: string;
+  status: number;
 }
