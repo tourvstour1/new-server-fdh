@@ -1,26 +1,25 @@
-import { getPatientOpd } from "../libs/api/getPatient.provider";
 import { GetPatientService, PatientServiceOpdResponst } from "./patient.entity";
 import { db } from "../libs/database/database";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { opd } from "../libs/database/schema/opd";
-import { log } from "console";
+import { PatientPrivider } from "../libs/api/getPatient.provider";
 
-export const patientOpd = async ({
-  serviceType,
-  visitNumber,
-}: GetPatientService): Promise<PatientServiceOpdResponst> => {
+const patientPrivider = new PatientPrivider()
+
+export const patientOpd = async (parm: GetPatientService): Promise<PatientServiceOpdResponst> => {
+
   const result: PatientServiceOpdResponst = {
-    hospitalCode: "11321",
+    hospitalCode: parm.hospitalCode,
   };
+
   const findInDatabase = await db.query.opd.findMany({
-    where: eq(opd.seq, visitNumber),
+    where: and(eq(opd.seq, parm.vn), eq(opd.hospital_code, parm.hospitalCode))
   });
 
-  console.log(findInDatabase);
 
   if (findInDatabase.length > 0) {
   } else {
-    const resultApi = (await getPatientOpd(visitNumber)).data;
+    const resultApi = (await patientPrivider.getPatientOpd({ hospitalCode: parm.hospitalCode, seq: parm.vn })).data;
     result.data = resultApi;
   }
 

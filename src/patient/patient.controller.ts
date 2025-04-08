@@ -8,34 +8,23 @@ import { patientOpd } from "./patient.service";
 
 export const findPatientOpd = api(
   { path: "/find-patient-opd", method: "POST", expose: true },
-  async ({
-    serviceType,
-    visitNumber,
-  }: GetPatientService): Promise<PatientServiceOpdResponst> => {
+  async (parm: GetPatientService): Promise<PatientServiceOpdResponst> => {
     try {
-      return await patientOpd({ serviceType, visitNumber });
+      return await patientOpd(parm);
     } catch (err) {
       throw err;
     }
   }
 );
 
-export const findPatientIpd = api(
-  { path: "/find-patient-ipd", method: "POST", expose: true },
-  async ({
-    serviceType,
-    visitNumber,
-  }: GetPatientService): Promise<PatientServiceIpdResponst> => {
-    try {
-      return patientIpd();
-    } catch (err) {
-      throw err;
-    }
-  }
-);
+// export const findPatientIpd = api(
+//   { path: "/find-patient-ipd", method: "POST", expose: true },
+//   async (parm: GetPatientService): Promise<PatientServiceIpdResponst> => {
+//     try {
+//       return await patientOpd(parm);
+//     } catch (err) {
+//       throw err;
+//     }
+//   }
+// );
 
-const patientIpd = async (): Promise<PatientServiceIpdResponst> => {
-  return {
-    hospitalCode: "11321",
-  };
-};

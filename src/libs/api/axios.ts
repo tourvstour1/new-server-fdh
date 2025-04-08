@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
-
+import { configDotenv } from "dotenv";
+configDotenv()
 export const instance: AxiosInstance = axios.create({
-  baseURL: "http://183.88.219.85:5200",
-
+  baseURL: process.env.URL_SERVER_HOSPITAL,
   headers: { "Content-Type": "application/json" },
 });

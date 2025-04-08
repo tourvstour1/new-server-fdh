@@ -18,8 +18,8 @@ import { PatModel } from "../libs/database/model/pat.interface";
 import { PhdbModel } from "../libs/database/model/phdb.interface";
 
 export interface GetPatientService {
-  serviceType: "opd" | "ipd";
-  visitNumber: string;
+  hospitalCode: string
+  vn: string;
 }
 
 export interface PatientServiceOpdResponst {
