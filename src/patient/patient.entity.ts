@@ -39,6 +39,7 @@ export interface PatientServiceOpdResponst {
     pat: PatModel;
     phdb: PhdbModel;
   };
+  error?: string
 }
 
 export interface PatientServiceIpdResponst {

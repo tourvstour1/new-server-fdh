@@ -2,9 +2,10 @@ import { GetPatientService, PatientServiceOpdResponst } from "./patient.entity";
 import { db } from "../libs/database/database";
 import { and, eq } from "drizzle-orm";
 import { opd } from "../libs/database/schema/opd";
-import { PatientPrivider } from "../libs/api/getPatient.provider";
+import PatientProvider from "../libs/api/patient.provider";
 
-const patientPrivider = new PatientPrivider()
+
+const patientPrivider = new PatientProvider()
 
 export const patientOpd = async (parm: GetPatientService): Promise<PatientServiceOpdResponst> => {
 
@@ -18,12 +19,16 @@ export const patientOpd = async (parm: GetPatientService): Promise<PatientServic
 
 
   if (findInDatabase.length > 0) {
+
   } else {
-    const resultApi = (await patientPrivider.getPatientOpd({ hospitalCode: parm.hospitalCode, seq: parm.vn })).data;
-    result.data = resultApi;
+    const resultApi = (await patientPrivider.getPatientOPd({ hospitalCode: parm.hospitalCode, seq: parm.vn }));
+    console.log(resultApi.code);
+
+    if (resultApi.data) {
+      result.data = resultApi.data;
+    } else {
+      result.error = resultApi.code
+    }
   }
-
-  console.log(result);
-
   return result;
 };

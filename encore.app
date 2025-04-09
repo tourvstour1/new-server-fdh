@@ -1,4 +1,5 @@
 {
 	"id":   "fdh-app-v4ti",
-	"lang": "typescript"
+	"lang": "typescript",
+	"allow_headers":["*"]
 }
